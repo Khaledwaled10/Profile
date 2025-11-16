@@ -35,9 +35,14 @@ export default function Home() {
             <a href="/projects" className="px-6 py-3 bg-purple-900 text-white rounded-xl hover:bg-purple-700 transition shadow-lg">
               My Projects
             </a>
-            <a href="/contact" className="px-6 py-3 border-2 border-purple-900 text-purple-900 rounded-xl hover:bg-purple-900 hover:text-white transition shadow-lg">
-              Contact Me
-            </a>
+<a
+  href="/khaledWaledcv-1.pdf"
+  download
+  className="px-6 py-3 border-2 border-purple-900 text-purple-900 rounded-xl hover:bg-purple-900 hover:text-white transition shadow-lg"
+>
+  Download CV
+</a>
+
           </div>
         </motion.div>
 

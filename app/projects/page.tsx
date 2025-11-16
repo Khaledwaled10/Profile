@@ -21,8 +21,8 @@ const projects = [
     title: 'Portfolio',
     desc: 'My personal portfolio website with animations.',
     imgSrc: '/profile.png',
-    liveLink: '#',
-    codeLink: '#',
+    liveLink: 'https://profile-six-eta-96.vercel.app/',
+    codeLink: 'https://github.com/Khaledwaled10/Profile',
   },
   {
     title: 'Games',
@@ -38,7 +38,6 @@ const projects = [
     liveLink: 'https://khaledwaled10.github.io/Weather/',
     codeLink: 'https://github.com/Khaledwaled10/Weather',
   },
-  
 ];
 
 export default function Projects() {
