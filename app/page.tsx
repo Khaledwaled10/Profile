@@ -41,7 +41,7 @@ export default function Home() {
             </a>
 
             <a
-              href="/khaledWaledcv-1.pdf"
+              href="/KhaledWaledcv.pdf"
               download
               className="px-6 py-3 border-2 border-purple-900 text-purple-900 rounded-xl hover:bg-purple-900 hover:text-white transition shadow-lg"
             >
