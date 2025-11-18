@@ -26,7 +26,7 @@ const projects = [
   },
   {
     title: 'Games',
-    desc: 'A comprehensive games showcase website featuring detailed descriptions, images, and features of popular mini-games. Explore and learn about each game without playing.',
+    desc: 'A comprehensive games showcase website featuring mini-games info without playing.',
     imgSrc: '/games.png',
     liveLink: 'https://khaledwaled10.github.io/Games/',
     codeLink: 'https://github.com/Khaledwaled10/Games',
@@ -43,15 +43,17 @@ const projects = [
 export default function Projects() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-pink-50 py-24 px-6">
+      {/* Title */}
       <motion.h1
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-5xl font-bold text-center mb-12 text-purple-900"
+        className="text-5xl font-extrabold text-center mb-16 text-purple-900 drop-shadow-sm"
       >
         My Projects
       </motion.h1>
 
+      {/* Projects Grid */}
       <motion.div
         initial="hidden"
         animate="visible"
@@ -59,17 +61,24 @@ export default function Projects() {
           hidden: { opacity: 0 },
           visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
         }}
-        className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto"
+        className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto"
       >
         {projects.map((project) => (
-          <ProjectCard
+          <motion.div
             key={project.title}
-            title={project.title}
-            desc={project.desc}
-            imgSrc={project.imgSrc}
-            liveLink={project.liveLink}
-            codeLink={project.codeLink}
-          />
+            whileHover={{ y: -5, scale: 1.03 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+          >
+            <ProjectCard
+              title={project.title}
+              desc={project.desc}
+              imgSrc={project.imgSrc}
+              liveLink={project.liveLink}
+              codeLink={project.codeLink}
+            />
+          </motion.div>
         ))}
       </motion.div>
     </div>

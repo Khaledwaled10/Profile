@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+
 const skills = [
   { name: 'HTML', color: 'bg-orange-400' },
   { name: 'CSS', color: 'bg-blue-500' },
@@ -14,10 +15,10 @@ const skills = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 via-pink-50 to-yellow-50 relative overflow-hidden">
-      
+
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between">
-        
+
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -32,18 +33,71 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center md:justify-start space-x-4">
-            <a href="/projects" className="px-6 py-3 bg-purple-900 text-white rounded-xl hover:bg-purple-700 transition shadow-lg">
+            <a
+              href="/projects"
+              className="px-6 py-3 bg-purple-900 text-white rounded-xl hover:bg-purple-700 transition shadow-lg"
+            >
               My Projects
             </a>
+
+            <a
+              href="/khaledWaledcv-1.pdf"
+              download
+              className="px-6 py-3 border-2 border-purple-900 text-purple-900 rounded-xl hover:bg-purple-900 hover:text-white transition shadow-lg"
+            >
+              Download CV
+            </a>
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex justify-center md:justify-start space-x-4 mt-6">
+            <a
+              href="https://github.com/Khaledwaled10"
+              target="_blank"
+              className="p-3 bg-white border-2 border-purple-900 rounded-full hover:bg-purple-900 hover:text-white transition shadow-lg"
+            >
+              <i className="fa-brands fa-github text-2xl"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/khaled-waled-7219b5294/"
+              target="_blank"
+              className="p-3 bg-white border-2 border-purple-900 rounded-full hover:bg-purple-900 hover:text-white transition shadow-lg"
+            >
+              <i className="fa-brands fa-linkedin text-2xl"></i>
+            </a>
+
+            <a
+              href="mailto:khaledwaled8713@gmail.com"
+              className="p-3 bg-white border-2 border-purple-900 rounded-full hover:bg-purple-900 hover:text-white transition shadow-lg"
+            >
+              <i className="fa-solid fa-envelope text-2xl"></i>
+            </a>
+
 <a
-  href="/khaledWaledcv-1.pdf"
-  download
-  className="px-6 py-3 border-2 border-purple-900 text-purple-900 rounded-xl hover:bg-purple-900 hover:text-white transition shadow-lg"
+  href="https://vercel.com/khaledwaleds-projects"
+  target="_blank"
+  className="p-3 bg-white border-2 border-purple-900 rounded-full hover:bg-purple-900 hover:text-white transition shadow-lg flex items-center justify-center"
 >
-  Download CV
+  <svg 
+    width="24" 
+    height="24" 
+    viewBox="0 0 24 24" 
+    fill="currentColor"
+  >
+    <path d="M12 2L24 22H0L12 2Z" />
+  </svg>
 </a>
 
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              className="p-3 bg-white border-2 border-purple-900 rounded-full hover:bg-purple-900 hover:text-white transition shadow-lg"
+            >
+              <i className="fa-brands fa-facebook text-2xl"></i>
+            </a>
           </div>
+
         </motion.div>
 
         <motion.div

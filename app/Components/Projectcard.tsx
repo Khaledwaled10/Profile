@@ -14,7 +14,7 @@ export default function ProjectCard({ title, desc, imgSrc, liveLink, codeLink }:
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
-      className="relative bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer"
+      className="relative bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer h-94"
     >
       {imgSrc && (
         <Image
